@@ -10,24 +10,82 @@ body {
   display: grid;
   grid-template-columns: 300px 300px 300px;
   grid-template-rows: 300px 300px 300px;
+  position: relative;
 }
 
 .boardSquare {
-  
   color: rgb(236, 82, 134);
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: xx-large;
+  font-size: 75px;
 }
 
-.rightBorder{
-border-right: 0.5em solid grey; 
+.rightBorder {
+  border-right: 0.5em solid grey;
 }
 
-.bottomBorder{
-border-bottom: 0.5em solid grey
+.bottomBorder {
+  border-bottom: 0.5em solid grey;
 }
+
+.strike {
+  position: absolute;
+  background-color: grey;
+}
+
+.strike-row-1 {
+  width: 100%;
+  height: 10px;
+  top: 14%;
+}
+
+.strike-row-2{
+    width: 100%;
+    height: 10px;
+    top: 47%
+}    
+
+.strike-row-3{
+    width: 100%;
+    height: 10px;
+    top: 82.5%
+}    
+
+.strike-column-1{
+    height: 100%;
+    width: 10px;
+    left: 14%
+}  
+
+.strike-column-2{
+    height: 100%;
+    width: 10px;
+    left: 47.25%
+}  
+
+.strike-column-3{
+    height: 100%;
+    width: 10px;
+    left: 82.75%
+}  
+
+.strik-diagonal-1{
+    width: 90%;
+    height: 10px;
+    top: 50%;
+    left: 5%;
+    transform: skewY(45deg);
+}
+
+.strik-diagonal-2{
+    width: 90%;
+    height: 10px;
+    top: 50%;
+    left: 5%;
+    transform: skewY(-45deg);
+}
+
 
 h1 {
   color: rgb(236, 82, 134);
