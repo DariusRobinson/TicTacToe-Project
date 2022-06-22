@@ -18,5 +18,6 @@ function onBoardClick() {
 
   renderState() // show the user the new state
 }
-const board = document.getElementById('board');
-board.addEventListener('click', onBoardClick);
+const gameBoard = document.getElementById('gameBoard');
+
+gameBoard.addEventListener('click', onBoardClick);
