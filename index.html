@@ -9,10 +9,10 @@
   </head>
   <body>
     <h1>Tic Tac Toe</h1>
-    <script src="app.js"></script>
+
     <!-- This will be the gameboards sections for x's and o's -->
     <div id="gameBoard">
-      <div data-index="1" class="boardSquare rightBorder bottomBorder"></div>
+      <div data-index="1" class="boardSquare rightBorder bottomBorder">x</div>
       <div data-index="2" class="boardSquare rightBorder bottomBorder"></div>
       <div data-index="3" class="boardSquare bottomBorder"></div>
       <div data-index="4" class="boardSquare rightBorder bottomBorder"></div>
@@ -21,7 +21,6 @@
       <div data-index="7" class="boardSquare rightBorder"></div>
       <div data-index="8" class="boardSquare rightBorder"></div>
       <div data-index="9" class="boardSquare"></div>
-
       <!-- strikeThroughs for when a player wins -->
       <div id="strikeThrough" class="strike strike-row-"></div>
       <div id="gameIsOver">
@@ -29,5 +28,6 @@
         <button id="play-again-button">Play Again...</button>
       </div>
     </div>
+    <script src="app.js"></script>
   </body>
 </html>
