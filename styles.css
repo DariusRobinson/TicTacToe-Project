@@ -8,8 +8,8 @@ body {
 #gameBoard {
   cursor: pointer;
   display: grid;
-  grid-template-columns: 300px 300px 300px;
-  grid-template-rows: 300px 300px 300px;
+  grid-template-columns: 200px 200px 200px;
+  grid-template-rows: 200px 200px 200px;
   position: relative;
 }
 
@@ -18,7 +18,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 75px;
+  font-size: 45px;
 }
 
 .rightBorder {
@@ -37,55 +37,62 @@ body {
 .strike-row-1 {
   width: 100%;
   height: 10px;
-  top: 14%;
+  top: 9%;
 }
 
-.strike-row-2{
-    width: 100%;
-    height: 10px;
-    top: 47%
-}    
-
-.strike-row-3{
-    width: 100%;
-    height: 10px;
-    top: 82.5%
-}    
-
-.strike-column-1{
-    height: 100%;
-    width: 10px;
-    left: 14%
-}  
-
-.strike-column-2{
-    height: 100%;
-    width: 10px;
-    left: 47.25%
-}  
-
-.strike-column-3{
-    height: 100%;
-    width: 10px;
-    left: 82.75%
-}  
-
-.strik-diagonal-1{
-    width: 90%;
-    height: 10px;
-    top: 50%;
-    left: 5%;
-    transform: skewY(45deg);
+.strike-row-2 {
+  width: 100%;
+  height: 10px;
+  top: 31%;
 }
 
-.strik-diagonal-2{
-    width: 90%;
-    height: 10px;
-    top: 50%;
-    left: 5%;
-    transform: skewY(-45deg);
+.strike-row-3 {
+  width: 100%;
+  height: 10px;
+  top: 54%;
 }
 
+.strike-column-1 {
+  height: 100%;
+  width: 10px;
+  left: 14%;
+}
+
+.strike-column-2 {
+  height: 100%;
+  width: 10px;
+  left: 47.25%;
+}
+
+.strike-column-3 {
+  height: 100%;
+  width: 10px;
+  left: 82.75%;
+}
+
+.strike-diagonal-1 {
+  width: 90%;
+  height: 10px;
+  top: 32.5%;
+  left: 5%;
+  transform: skewY(45deg);
+}
+
+.strike-diagonal-2 {
+  width: 90%;
+  height: 10px;
+  top: 32.5%;
+  left: 5%;
+  transform: skewY(-45deg);
+}
+
+#gameIsOver {
+  text-align: center;
+  border: 10px grey;
+  padding: 50px;
+  width: 50px;
+  margin-top: 50px;
+}
 
 h1 {
   color: rgb(236, 82, 134);
