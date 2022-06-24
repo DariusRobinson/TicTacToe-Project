@@ -23,8 +23,9 @@ const initialState = {
 
  let board = document.getElementById('board')
 
- 
+ let resetButton = document.getElementById('resetButton')
 
+ let winMessage = document.getElementById('you-Win')
 }
 // function to begin game and enter names etc...
 function buildInitialState() {
