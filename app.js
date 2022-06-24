@@ -1,10 +1,22 @@
-// state
-let initialState = {
-  players: ['x', 'o'],
+// define the starting state of the game 
+const initialState = {
+  player1 = "X"
+  player2 = "O"
   board: [
     [null, null, null],
     [null, null, null],
     [null, null, null]
+  ]
+// winning combos to be checked ever time 
+  winCombos = [
+  [0-0, 0-1, 0-2],
+  [1-0, 1-1, 1-2],
+  [2-0, 2-1, 2-2],
+  [0-0, 1-0, 2-0],
+  [0-1, 1-1, 2-1],
+  [0-2, 1-2, 2-2],
+  [0-0, 1-1, 2-2],
+  [0-2, 1-1, 2-0]
   ]
 }
 
