@@ -15,19 +15,16 @@ h1 {
   margin: auto;
 }
 
-table,
-tr,
+
 td {
   border: 1px solid rgba(140, 140, 193, 0.916);
 }
 
-td {
-  text-align: center;
-}
+
+
 .restartText {
   color: grey;
 }
 
 .cell{
-   cursor: pointer;
 }
