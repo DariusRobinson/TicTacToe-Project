@@ -18,8 +18,15 @@ const initialState = {
   [0-0, 1-1, 2-2],
   [0-2, 1-1, 2-0]
  ]
-}
+ let cellElement = document.querySelectorAll('td')  
+//^^pulling all the table cell elements
 
+ let board = document.getElementById('board')
+
+ 
+
+}
+// function to begin game and enter names etc...
 function buildInitialState() {
   
 
@@ -37,9 +44,11 @@ function renderState() {
 
 // update state, maybe with another dozen or so helper functions..
 function onBoardClick(event) {
-    event.target.innerText = 'O';
+  
+  document.addEventListener('click', (event) => )
+  event.target.innerText = 'O';
      
-    event.target.innerText = 'x';
+    // event.target.innerText = 'x';
   
 
   renderState() // show the user the new state
