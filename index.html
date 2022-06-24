@@ -9,24 +9,28 @@
   </head>
   <body>
     <h1>Tic Tac Toe</h1>
-
-    <!-- This will be the gameboards sections for x's and o's -->
-    <div id="gameBoard">
-      <div data-index="1" class="boardSquare rightBorder bottomBorder">x</div>
-      <div data-index="2" class="boardSquare rightBorder bottomBorder"></div>
-      <div data-index="3" class="boardSquare bottomBorder"></div>
-      <div data-index="4" class="boardSquare rightBorder bottomBorder"></div>
-      <div data-index="5" class="boardSquare rightBorder bottomBorder"></div>
-      <div data-index="6" class="boardSquare rightborder bottomBorder"></div>
-      <div data-index="7" class="boardSquare rightBorder"></div>
-      <div data-index="8" class="boardSquare rightBorder"></div>
-      <div data-index="9" class="boardSquare"></div>
+    <table id="board">
+      <tr>
+        <td id="0-0" class="cell">x</td>
+        <td id="0-1" class="cell">x</td>
+        <td id="0-2" class="cell">x</td>
+      </tr>
+      <tr>
+        <td id="1-0" class="cell">x</td>
+        <td id="1-1" class="cell">x</td>
+        <td id="1-2" class="cell">x</td>
+      </tr>
+      <tr>
+        <td id="2-0" class="cell">x</td>
+        <td id="2-1" class="cell">x</td>
+        <td id="2-2" class="cell">x</td>
+      </tr>
+      <!-- This will be the gameboards sections for x's and o's -->
       <!-- strikeThroughs for when a player wins -->
-      <div id="strikeThrough" class="strike strike-row-"></div>
-      <div id="gameIsOver">
-        <h2 id="game-over-text">Player 1 Wins!!!</h2>
-        <button id="play-again-button">Play Again...</button>
-      </div>
+    </table>
+    
+    <div clas="You Win!"></div>
+    <div class="restartText">Restart</div>
     </div>
     <script src="app.js"></script>
   </body>

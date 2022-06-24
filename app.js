@@ -1,5 +1,12 @@
 // state
-let initialState;
+let initialState = {
+  players: ['x', 'o'],
+  board: [
+    [null, null, null],
+    [null, null, null],
+    [null, null, null]
+  ]
+}
 
 function buildInitialState() {
 
@@ -17,6 +24,7 @@ function renderState() {
 // update state, maybe with another dozen or so helper functions..
 function onBoardClick(event) {
     event.target.innerText = 'O'
+     
     event.target.innerText = 'x'
   
 
@@ -26,3 +34,4 @@ function onBoardClick(event) {
 const board = document.getElementById('gameBoard');
 console.log(board)
 board.addEventListener('click', onBoardClick);
+
