@@ -16,31 +16,40 @@ h1 {
   margin: auto;
 }
 
-
 td {
   border: 1px solid rgba(140, 140, 193, 0.916);
 }
-
-
 
 .restartText {
   color: grey;
 }
 
-#Game-over-Box{
-  display: block;
+#Game-over-box {
   text-align: center;
-  background-color: #1e970e;
-  border: 1px solid rgb(160, 6, 6) ;
-  padding: 45px;
+  background-color: #070e06;
+  border: 1px solid rgb(160, 6, 6);
+  padding: 75px;
   width: 30%;
   margin: 0 auto;
   margin-top: 30px;
-
+  color: grey;
 }
 
-#resetButton{
+#resetButton {
   margin: 0 auto;
   display: block;
   margin-top: -49px;
+}
+#WinnerIsText {
+  padding-bottom: 55px;
+  font-size: 30px;
+  margin-top: 0px;
+}
+
+/* .hidden {
+  display: none;
+} */
+
+.visible {
+  display: block;
 }

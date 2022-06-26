@@ -29,9 +29,22 @@
       <div id="nameBar"></div>
       <!-- This will be the gameboards sections for x's and o's -->
     </table>
-
-    <div id="Game-over-box">
-      <h2 id="playAgainText">Play Again</h2>
+    <div class="container">
+      <div class="p1">
+        <label>Player 1:</label>
+        <input id="p1" type="text" />
+      </div>
+      <div class="p2">
+        <label>Player 2:</label>
+        <input id="p2" type="text" />
+      </div>
+      <div class="btnContainer">
+        <input id="btn" class="btn" type="button" value="Submit" />
+      </div>
+    </div>
+    <!-- ^^To add player names  -->
+    <div id="Game-over-box" class="hidden">
+      <h2 id="WinnerIsText">Winner is X</h2>
       <button id="resetButton" class="reset-Button">Play Again!!!</button>
     </div>
     <script src="app.js"></script>
