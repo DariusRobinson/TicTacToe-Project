@@ -1,11 +1,12 @@
+/* something is making my board warp in size when aa box is clicked.... */
 body {
-  background-color: black;
+  background-color: rgb(74, 74, 74);
 }
 h1 {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
   font-size: 60px;
-  color: grey;
+  color: black;
 }
 
 #board {
@@ -26,5 +27,20 @@ td {
   color: grey;
 }
 
-.cell{
+#Game-over-Box{
+  display: block;
+  text-align: center;
+  background-color: #1e970e;
+  border: 1px solid rgb(160, 6, 6) ;
+  padding: 45px;
+  width: 30%;
+  margin: 0 auto;
+  margin-top: 30px;
+
+}
+
+#resetButton{
+  margin: 0 auto;
+  display: block;
+  margin-top: -49px;
 }

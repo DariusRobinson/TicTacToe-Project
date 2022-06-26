@@ -22,28 +22,40 @@ winCombos = [
   [0 - 0, 1 - 1, 2 - 2],
   [0 - 2, 1 - 1, 2 - 0],
 ];
-let cellElement = document.querySelectorAll("td");
-//^^pulling all the table cell elements
 
-let board = document.getElementById("board");
+//Elements
+const cellElement = document.querySelectorAll("td");
+const board = document.getElementById("board");
+const resetButton = document.getElementById("resetButton");
+console.log(board)
+const square1 = document.getElementById("0-0")
+const square2 = document.getElementById("0-1")
+const square3 = document.getElementById("0-2")
+//^^Row 1
+const square4 = document.getElementById("1-0")
+const square5 = document.getElementById("1-1")
+const square6 = document.getElementById("1-2")
+//^^ Row 2
+const square7 = document.getElementById("2-0")
+const square8 = document.getElementById("2-1")
+const square9 = document.getElementById("2-2")
 
-let resetButton = document.getElementById("resetButton");
-
-let winMessage = document.getElementById("you-Win");
-
-// function to begin game and enter names etc...
-function buildInitialState() {}
 
 
-
-// render
-function renderState() {}
-
-// maybe a dozen or so helper functions for tiny pieces of the interface
-
-// listeners
+const winMessage = document.getElementById("you-Win");
 
 board.addEventListener("click", (event) => {
+const cor = event.target.id
+
+
+// console.log(cor)
+const row = cor[0]
+const column = cor[2]
+initialState.board[row][column]= ''
+// console.log(initialState.board)
+// // console.log(cor[0])
+// console.log(cor[2])
+
   if (event.target.innerText === "") {
     if (initialState.count % 2 === 0) {
       event.target.innerText = "x";
@@ -58,3 +70,6 @@ board.addEventListener("click", (event) => {
 // const board = document.getElementById('gameBoard');
 // console.log(board)
 // board.addEventListener('click', onBoardClick);
+
+
+
