@@ -217,11 +217,19 @@ function cellClick(event) {
   } else {
     Cell.innerText = Player2;
     boardState[cellNumber - 1] = Player2;
-    winnerCheck(); //having trouble getting my win check to work so commenting out the game over function...
+    winnerCheck(); 
     turn = Player1;
   }
 }
-// function resetClick(){
-//   document.getElementById('resetButton').element.addEventListener(click, reset);
 
-// }
+resetButton.addEventListener("click", resetClick)
+function resetClick(){
+  
+if(square1.innerText != "X"){
+return square1.innerText ===''
+}
+
+}
+// const restardButton = document.getElementById(“restart”);
+// restartButton.addEventListener(“click”) () => {
+// };
