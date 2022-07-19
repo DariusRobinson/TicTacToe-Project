@@ -224,10 +224,8 @@ function cellClick(event) {
 
 resetButton.addEventListener("click", resetClick)
 function resetClick(){
-  
-if(square1.innerText != "X"){
-return square1.innerText ===''
-}
+  cells.forEach((Cell) => Cell.innerText === "");
+
 
 }
 // const restardButton = document.getElementById(“restart”);
