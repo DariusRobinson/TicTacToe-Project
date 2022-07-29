@@ -1,6 +1,7 @@
 /* something is making my board warp in size when aa box is clicked.... */
 body {
   background-color: rgb(74, 74, 74);
+  
 }
 h1 {
   font-family: Arial, Helvetica, sans-serif;
@@ -9,16 +10,19 @@ h1 {
   color: black;
 }
 
+#playerNameBoxes{
+border-style: solid White;
+
+}
+
+
 #board {
-  height: 325px;
-  width: 325px;
+  height: 330px;
+  width: 330px;
   background-color: white;
   margin: auto;
 }
 
-td {
-  border: 1px solid rgba(140, 140, 193, 0.916);
-}
 
 .restartText {
   color: grey;
@@ -52,4 +56,11 @@ td {
 
 .visible {
   display: block;
+}
+.cell {
+  border: 1px solid rgba(140, 140, 193, 0.916);
+  min-width: 110px;
+  min-height: 110px;
+  max-width: 110px;
+  max-height: 110px;
 }

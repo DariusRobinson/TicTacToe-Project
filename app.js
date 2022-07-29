@@ -9,10 +9,32 @@ boardState.fill(null); //automatically fill all tiles with null value
 console.log(boardState);
 
 //Elements
-
+const nameButton = document.getElementById("btn");
+const Oplayer = document.getElementById("Oplayer");
+const Xplayer = document.getElementById("Xplayer");
+const p1 = document.getElementById("p1");
+const p2 = document.getElementById("p2");
 const board = document.getElementById("board");
 const resetButton = document.getElementById("resetButton");
 console.log(board);
+
+let playerXBar = p1.value;
+let playerOBar = p2.value;
+//Reset button && Name Bars
+resetButton.addEventListener("click", resetClick);
+function resetClick() {
+  cells.forEach((Cell) => (Cell.innerText = ""));
+  gameEnd.className = "hidden";
+  boardState.fill(null);
+}
+
+nameButton.addEventListener("click", NameBars);
+
+function NameBars() {
+  Xplayer.innerText = p1.value;
+  Oplayer.innerText = p2.value;
+  console.log(p1.value, "this is the new value");
+}
 
 //Storing board spot in variable to call for win check...
 
@@ -179,7 +201,7 @@ const gameEnd = document.getElementById("Game-over-box");
 function gameOverX() {
   let text = "X";
   if (winnerText !== null) {
-    text = `The Winner is ${text}!!!`;
+    text = `The Winner is ${p1.value}!!!`;
   }
   winnerText.innerText = text;
   gameEnd.className = "visible";
@@ -187,7 +209,7 @@ function gameOverX() {
 function gameOverO() {
   let text = "O";
   if (winnerText !== null) {
-    text = `The Winner is ${text}!!!`;
+    text = `The Winner is ${p2.value}!!!`;
   }
   winnerText.innerText = text;
   gameEnd.className = "visible";
@@ -210,24 +232,26 @@ function cellClick(event) {
   }
 
   if (turn === Player1) {
+    Oplayer.innerHTML=`${p2.value}`
+    Xplayer.innerText=`It is ${p1.value} turn...`;
     Cell.innerText = Player1;
     boardState[cellNumber - 1] = Player1;
     winnerCheck();
     turn = Player2;
   } else {
+    Xplayer.innerHTML=`${p1.value}`
+    Oplayer.innerText=`It is ${p2.value} turn...`
     Cell.innerText = Player2;
     boardState[cellNumber - 1] = Player2;
-    winnerCheck(); 
+    winnerCheck();
     turn = Player1;
   }
 }
 
-resetButton.addEventListener("click", resetClick)
-function resetClick(){
-  cells.forEach((Cell) => Cell.innerText === "");
+// function P1Submit(){
+// Xplayer.innerText = `This works`
+// }
 
-
-}
 // const restardButton = document.getElementById(“restart”);
 // restartButton.addEventListener(“click”) () => {
 // };
