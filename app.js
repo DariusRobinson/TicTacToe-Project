@@ -6,7 +6,7 @@ let turn = Player1;
 let isActive = false;
 const boardState = Array(cells.length);
 boardState.fill(null); //automatically fill all tiles with null value
-console.log(boardState);
+
 
 //Elements
 const nameButton = document.getElementById("btn");
@@ -16,24 +16,25 @@ const p1 = document.getElementById("p1");
 const p2 = document.getElementById("p2");
 const board = document.getElementById("board");
 const resetButton = document.getElementById("resetButton");
-console.log(board);
+const gameEnd = document.getElementById("Game-over-box");
 
 let playerXBar = p1.value;
 let playerOBar = p2.value;
+
 //Reset button && Name Bars
 resetButton.addEventListener("click", resetClick);
 function resetClick() {
   cells.forEach((Cell) => (Cell.innerText = ""));
   gameEnd.className = "hidden";
   boardState.fill(null);
+   p1.value = ``;
+   p2.value = ``;
 }
 
 nameButton.addEventListener("click", NameBars);
-
 function NameBars() {
   Xplayer.innerText = p1.value;
   Oplayer.innerText = p2.value;
-  console.log(p1.value, "this is the new value");
 }
 
 //Storing board spot in variable to call for win check...
@@ -68,14 +69,14 @@ function winnerCheck() {
     square1.innerText === square2.innerText &&
     square2.innerText === square3.innerText
   ) {
-    return gameOverX(`${square1.innerText} Wins!!`);
+    return gameOverX();
   } else if (
     square1.innerText !== "" &&
     square1.innerText === "O" &&
     square1.innerText === square2.innerText &&
     square2.innerText === square3.innerText
   ) {
-    return gameOverO(`${square1.innerText} Wins!!`);
+    return gameOverO();
   }
   //ROW 2
   else if (
@@ -84,14 +85,14 @@ function winnerCheck() {
     square4.innerText === square5.innerText &&
     square5.innerText === square6.innerText
   ) {
-    return gameOverX(`${square4.innerText} Wins!!!`);
+    return gameOverX();
   } else if (
     square4.innerText !== "" &&
     square4.innerText === "O" &&
     square4.innerText === square5.innerText &&
     square5.innerText === square6.innerText
   ) {
-    return gameOverO(`${square4.innerText} Wins!!`);
+    return gameOverO();
   }
   //ROW 3
   else if (
@@ -100,14 +101,14 @@ function winnerCheck() {
     square7.innerText === square8.innerText &&
     square8.innerText === square9.innerText
   ) {
-    return gameOverX(`${square7.innerText} Wins!!!`);
+    return gameOverX();
   } else if (
     square7.innerText !== "" &&
     square7.innerText === "O" &&
     square7.innerText === square8.innerText &&
     square8.innerText === square9.innerText
   ) {
-    return gameOverO(`${square7.innerText} Wins!!!`);
+    return gameOverO();
   }
 
   // COLUMN WIN CHECKERS>>>
@@ -118,14 +119,14 @@ function winnerCheck() {
     square1.innerText === square4.innerText &&
     square1.innerText === square7.innerText
   ) {
-    return gameOverX(`${square1.innerText} Wins!!!`);
+    return gameOverX();
   } else if (
     square1.innerText !== "" &&
     square1.innerText === "O" &&
     square1.innerText === square4.innerText &&
     square1.innerText === square7.innerText
   ) {
-    return gameOverO(`${square1.innerText} Wins!!!`);
+    return gameOverO();
   }
   //COLUMN 2
   else if (
@@ -134,14 +135,14 @@ function winnerCheck() {
     square2.innerText === square5.innerText &&
     square2.innerText === square8.innerText
   ) {
-    return gameOverX(`${square2.innerText} Wins!!!`);
+    return gameOverX();
   } else if (
     square2.innerText !== "" &&
     square2.innerText === "O" &&
     square2.innerText === square5.innerText &&
     square2.innerText === square8.innerText
   ) {
-    return gameOverO(`${square2.innerText} Wins!!!`);
+    return gameOverO();
   }
   //COLUMN 3
   else if (
@@ -150,14 +151,14 @@ function winnerCheck() {
     square3.innerText === square6.innerText &&
     square3.innerText === square9.innerText
   ) {
-    return gameOverX(`${square3.innerText} Wins!!!`);
+    return gameOverX();
   } else if (
     square3.innerText !== "" &&
     square3.innerText === "O" &&
     square3.innerText === square6.innerText &&
     square3.innerText === square9.innerText
   ) {
-    return gameOverO(`${square3.innerText} Wins!!!`);
+    return gameOverO();
   }
   //Angle 1
   else if (
@@ -166,14 +167,14 @@ function winnerCheck() {
     square1.innerText === square5.innerText &&
     square1.innerText === square9.innerText
   ) {
-    return gameOverX(`${square1.innerText} Wins!!!`);
+    return gameOverX();
   } else if (
     square1.innerText !== "" &&
     square1.innerText === "O" &&
     square1.innerText === square5.innerText &&
     square1.innerText === square9.innerText
   ) {
-    return gameOverO(`${square1.innerText} Wins!!!`);
+    return gameOverO();
   }
   //ANGLE 2
   else if (
@@ -182,21 +183,21 @@ function winnerCheck() {
     square3.innerText === square5.innerText &&
     square3.innerText === square7.innerText
   ) {
-    return gameOverX(`${square3.innerText} Wins!!!`);
+    return gameOverX();
   } else if (
     square3.innerText !== "" &&
     square3.innerText === "O" &&
     square3.innerText === square5.innerText &&
     square3.innerText === square7.innerText
   ) {
-    return gameOverO(`${square3.innerText} Wins!!!`);
+    return gameOverO();
   }
   //Draw Screen
   else if (everythingFilled) {
     return gameOverFinal(null);
   }
 }
-const gameEnd = document.getElementById("Game-over-box");
+
 //GAME OVER FUNCTIONS
 function gameOverX() {
   let text = "X";
@@ -248,10 +249,4 @@ function cellClick(event) {
   }
 }
 
-// function P1Submit(){
-// Xplayer.innerText = `This works`
-// }
 
-// const restardButton = document.getElementById(“restart”);
-// restartButton.addEventListener(“click”) () => {
-// };
