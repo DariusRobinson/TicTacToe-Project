@@ -16,13 +16,22 @@ border-style: solid White;
 }
 
 
-#board {
-  /* display: grid; */
+/* #board {
+  
   grid-template-columns: repeat(3,155px);
   grid-template-rows: repeat(3,155px); 
   justify-content: center;
-  /* height: 330px;
-  width: 330px; */
+ 
+  
+  background-color: white;
+  margin: auto;
+} */
+
+#board {
+  height: 325px;
+  width: 325px;
+  height: 330px;
+  width: 330px;
   background-color: white;
   margin: auto;
 }
